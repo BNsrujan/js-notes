@@ -180,9 +180,9 @@ let a = 6;
 let b = 5;
 let cond1 = a > b; //true
 let cond2 = a === 6; //true
-console. log("cond1 && cond2 = ", cond1 && cond2);
-console. log("cond1 && cond2 = ", a < b && a === 6);
-console. log("cond1 || cond2 = ", a < b || a === 6);
+console. log("cond1 && cond2 = and", cond1 && cond2);
+console. log("cond1 && cond2 = and", a < b && a === 6);
+console. log("cond1 || cond2 = or", a < b || a === 6);
 console.log("! (a<b) = ", !(a < b)); //false
 }
 }
@@ -400,6 +400,7 @@ console.log( ris);
 }
 
 {
+{
 //array => colection of similler data type array is an object in js
 // array are mutabale 
 
@@ -410,5 +411,234 @@ console.log(typeof[m])
 console.log(typeof[n])
 console.log(typeof[array])
 
+console.log(array[0])
+array[2] = 66;
+console.log(array)
+
+// lopping over an Array
+let array1= [1,3,4,5,6,7,8,9,4,43,2,34,];
+for(let i =0 ;i<array1.length;i++){
+    
+console.log(array1[1]);
+
+}
+//for of
+for (let i of array1){
+    console.log(i);
 }
 
+let cities = ["delhi", "pune", "mumbai", "hyderabad", "gurgaon"];
+for(let city of cities) {
+console.log(city.toUpperCase());
+}
+
+// Qs. For a given array with marks of students -> [85, 97, 44, 37, 76, 60]
+// Find the average marks of the entire class.
+students =[85, 97, 44, 37, 76, 60];
+sum =0;
+for(let i of students)
+    sum = sum + i;//sum +=i
+
+let average = sum/(students.length);
+console.log(`the average of sudents are ${average}`);
+
+// Qs. For a given array with prices of 5 items -> [250, 645, 300, 900, 50]
+// All items have an offer of 10% OFF on them. Change the array to store final price after
+// applying offer.
+let items = [250, 645, 300, 900, 50];
+let i = 0;
+for (let val of items) {
+console.log(`value at index ${i} = ${val}`);
+items[i] = val-(val/10);
+console.log(`value after offer = ${items[i]}`);
+i++;
+}
+console.log(items);
+}
+
+
+
+{
+let items=["potato","apple","litchi",66,"tomato"];
+    //pus():add to end
+    items.push("chips","burger","paneer");
+    console.log("pushed ",items);
+    //pop():delete from end and return
+    items.pop();
+    console.log("poped",items)
+    //tostring():converts arry items to string 
+    console.log(items.toString());//new array is creaated to display the toString
+    console.log("toString",items)
+    //concat():joins mutiple arrays and returns newstring
+    new_items=["bananna","mango","papay"];
+    new_item=["banannachips","mango_chips"];
+    console.log("cocat three string",items.concat(new_items,new_item))//it is a new array
+    //unshift():add to start it is like push
+    items.unshift("chips","burger","paneer");
+    console.log("upshift",items);
+    //shift():delete from start and return it is like pop
+    items.shift();
+    console.log("shift",items)
+// Slice(): returns a piece of the array
+// slice(startldx, endldx ) it will not change original array 
+   console.log("slice",items.slice(1,3));
+// Splice(): change original array (add, remove+1, replace)
+// splice( startldx, deletCount, if we want to add newElements. at the place of deletedarry);
+    console.log("splice",items.splice(1,3,"add_frute"))
+    console.log(items)
+
+// Qs. Create an array to store companies -> "Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"
+// a. Remove the first company from the array
+// b. Remove Uber & Add Ola in its place
+// c. Add Amazon at the end
+
+companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"]
+console.log(companies.shift());
+console.log(companies);
+companies.splice(2,1,"ola");
+console.log(companies)
+companies.push("amazon")
+console.log(companies)
+}
+}
+
+{
+//     Functions in JS
+// Block of code that performs a specific task, can be invoked whenever needed
+//exampals are log(),toupperCase(),push()
+console.log("HELLO");
+"abc".toUpperCase();
+[1,2,3].push(4);
+
+
+//function functionName(){
+    // local variabals
+    //do some work
+// }
+// or
+// funtion functioName(parameater1,parameater2......){
+    // do some work
+// }
+
+// funtion calling 
+// fnctionName();
+
+function myFunction(){
+    console.log("we are fleaxra");
+    console.log("flixara")
+    console.log("flixara");
+    console.log("flixara");
+    console.log("flixara")
+}
+
+myFunction();
+
+
+function newFunction(massage){
+    //parameter -> input
+    console.log(massage);
+}
+// NaN error =>not a number
+newFunction("moneky"); // argument
+
+
+
+function newFunction(x,y){
+    console.log(x*y);
+
+}
+newFunction(10,50); 
+
+
+function newFunction(massage) {
+    // Check if the input is a number
+    if (isNaN(massage)) {
+        console.log("Input is not a number");
+    } else {
+        // Perform operations with the numeric value
+        console.log(massage);
+    }
+}
+
+// Example usage
+newFunction("monkey"); // Output: Input is not a number
+newFunction(42); // Output: 42
+
+function sum(x, y){
+    s = x+ y;
+    console. log("before return");
+    return s; // return will alwas return one value
+    console. log("after return");//these is an unreachabal code
+}
+    let val = sum(3, 4);
+    console.log(val);
+
+{
+
+
+// arrow functions => compact way of writing a function
+
+// const functionName =(parameater1,parameater2... )=>{
+    // contrent 
+// }
+let container =(a,b)=>{
+    console.log(a+b);
+}
+console.log(container)
+container(2,3)//it will print the value
+
+// or
+let containers = (a,b)=>{
+    return a*b
+}
+containers(2,3)//it will not print the value
+console.log(containers(2,3))
+
+const printhello =()=>{console.log("hellow");}
+printhello();
+
+// Qs. Create a function using the "function" keyword that takes a String as an argument &
+// returns the number of vowels in the string.
+// Qs. Create an arrow function to perform the same task.
+const strings =(str)=>{
+    let count =0;
+    for (let i of str){
+        if ( i === "a"||i ==="e"||i ==="i"||i ==="o"||i==="u"){
+         count++;
+        }
+        
+    }
+    return count
+}
+let m =strings("flixara")
+console.log(m)
+}
+
+
+
+
+
+{
+// forEach loop in array   it is a merthods
+let  arr = [1,2,3,4,5,6,7,8];
+
+arr.forEach(function display(val){//forEach is used to take the input from the anothe funtion one by one and do the oparation which is writen in the container
+    console.log(val);
+})
+// or  
+arr.forEach((val)=>{
+    console.log(val);
+})
+
+
+
+
+
+
+
+
+
+
+
+}
+}
