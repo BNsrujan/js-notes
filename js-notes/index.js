@@ -43,7 +43,7 @@ let names = 233;
  //you cannot initals
 }
 
-{
+
 {
     //Data Types in JS
     //number
@@ -120,7 +120,6 @@ let names = 233;
     console.log       (profile);
     console.log(typeof profile ["followers"]);
     }
-}   
 {
 /* Operators in JS =Used to perform some operation on data*/
 {
