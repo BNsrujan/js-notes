@@ -27,7 +27,21 @@ console.log("moneky"+"donkey");// + will not give a space between monkey and don
 }
 
 
-
+{
+/*var : Variable can be re-declared & updated. A global scope variable.*/
+ var name =12;
+ var name =13;
+    
+/*let: Variable cannot be re-declared but can be updated. A block scope variable.*/
+{
+let names = 233;
+ } {
+ let namess = 34;
+ }
+ /*const: Variable cannot be re-declared or updated. A block scope variable.*/
+ const monkeys =23;
+ //you cannot initals
+}
 
 
 {
@@ -51,6 +65,7 @@ console.log("a++",a++);// the value will change from next line,first it will pri
 console.log("--a",--a);// the value will change from that line,first it will subtract then it will print
 console.log("--a",++a);// the value will change from that line,first it will add then it will print 
 }
+    
 {
 //assinment operators => = , += , -= , *= , **= 
 
