@@ -1,0 +1,24 @@
+.content {
+    color: red;
+}
+
+.newClass {
+    background-color: green;
+}
+
+button {
+    margin: 10px;
+}
+.belowclass{
+    padding: 10px;
+    background-color:  red;
+    border: 2px solid black;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
