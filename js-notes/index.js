@@ -27,100 +27,8 @@ console.log("moneky"+"donkey");// + will not give a space between monkey and don
 }
 
 
-{
-/*var : Variable can be re-declared & updated. A global scope variable.*/
-var name =12;
-var name =13;
-
-/*let: Variable cannot be re-declared but can be updated. A block scope variable.*/
-{
-    let names = 233;
-}
-{
-let namess = 34;
-}
-/*const: Variable cannot be re-declared or updated. A block scope variable.*/
-const monkeys =23;
-//you cannot initals
-}
 
 
-{
-//Data Types in JS
-//number
-let age =24 ;
-console.log(typeof age);
-let percent = 344.3 ;
-console.log(typeof percent) ;
-
-//string
-let fullName ="tony stark";
-console.log(typeof fullName) ;
-
-//boolean
-let isFollow =true;
-console.log(typeof isFollow );
-
-//undefined
-let x;
-
-//null
-let a = null;
-
-//BigInt
-let d = BigInt("1222222222");
-console.log(typeof d);
-
-//symbol
-let y = Symbol(" hello!")
-console.log(typeof y);
-}
-
-{
-//non-primitive data type
-
-const student = {
-    key:"value",
-    fullName: "Rahul Kumar",
-    age: 20,
-    cgpa: 8.2,
-    isPass: true 
-    };
-// printing
-console.log(student);
-console.log(student["age"]);
-console.log(student.age);
-student ["age"] = student ["age"] + 1;
-student ["name"]= "Rahul Sharma";
-console.log(student.age);
-console.log(student.name);
-// if we have const object we can change the key
-}
-
-{
-//project 1
-const product ={
-    name : "ball pen",
-    rating: 4,
-    offer: 5,
-    price: 270,
-    };
-console.log (product);
-}
-
-{
-//project2
-const profile ={
-    name : "shradhakhapra",
-    posts:195 ,
-    followers : 569,
-    following : 4,
-    follow: true,
-    massage : false,
-    };
-console.log       (profile);
-console.log(typeof profile ["followers"]);
-}
 
 {
 /* Operators in JS =Used to perform some operation on data*/
@@ -725,7 +633,8 @@ console.log(newAr)
 // Qs. Take a number n as input from user. Create an array of numbers from 1 to n.
 // Use the reduce method to calculate sum of all numbers in the array.
 // Use the reduce method to calculate product of all numbers in the array.
-let n = prompt("enter a number");
+let n = 45;// let n = prompt("enter a number");
+
 let arr = [];
 for(i = 1;i<=n;i++){
     arr[i-1]=i;
@@ -783,8 +692,20 @@ console.log("factorial",factorial);
 // window   => it will open all the element of the Websit
 // windows.document   => it will open all the codes of the Website 
 // console.dir()  => it will open all the  examplale =>console.dir(window.document)
+// DOM manipulation
+console.dir(document.body.childNodes[1].inner);
 
+// Selection with id
+document.getElementById("heading")
+let heading = document.getElementById("heading");
+console.log(heading)
 
+// selcting with class
+let classs = document.getElementsByClassName("class");
+console.log(classs)
+
+//selcting with tag
+document.getElementsByTagName("")
 
 
 
