@@ -23,7 +23,7 @@ console.log("moneky","donkey");// , will give a space between monkey and donkey
 console.log("moneky"+"donkey");// + will not give a space between monkey and donkey
 // alert give warrnig massig at the top
 //let age = alert("hellow");
-//prompt give the alert and it can take iput from an user which we can store it in an variabal
+//prompt give the alert and it can take input from an user which we can store it in an variabal
 }
 
 
@@ -32,11 +32,13 @@ console.log("moneky"+"donkey");// + will not give a space between monkey and don
  var name =12;
  var name =13;
     
-/*let: Variable cannot be re-declared but can be updated. A block scope variable.*/
+/*let: Variable cannot be re-declared but cannot be updated. A block scope variable.*/
 {
 let names = 233;
+namess= names +1;
+console.log(names);
  } {
- let namess = 34;
+ let names = 34;
  }
  /*const: Variable cannot be re-declared or updated. A block scope variable.*/
  const monkeys =23;
